@@ -1,5 +1,5 @@
 # Guilded Quick Reply
-A Guilded theme that allows you to quickly reply to a message
+Theme for Guilded.gg that allows you to quickly reply to a message
 
 Requires [ReGuilded](https://reguilded.dev/) or a [browser extension](https://github.com/openstyles/stylus/) for css injection
 
