@@ -1,0 +1,42 @@
+/* Reply area */
+.ChatV2Message-container .ChatMessageQuickActionsWrapper-container {
+    z-index: 0;
+}
+.ChatV2Message-container .QuickActionBar-action-wrapper:is([data-name="reply"],[data-name="reply-remove"]) {
+    position: absolute;
+    visibility: hidden;
+    transform: translateY(calc(200vh + 18px));
+}
+.ChatV2Message-container .QuickActionBar-action-wrapper:is([data-name="reply"],[data-name="reply-remove"])::after {
+    content: '';
+    visibility: visible;
+    position: absolute;
+    inset: -200vh -200px 0 -100vw;
+    z-index: 0;
+}
+/* Messages */
+.ChatV2Message-content-wrapper {
+    user-select: none;
+}
+.ChatV2MessageContents-container {
+    z-index: 1;
+    pointer-events: none;
+}
+/* Specific message elements */
+.ChatV2Message-container :is(.MediaRenderer-wrapper, .CodeContainerRenderer-language-indicator, .LinkRenderer, .EmbedCard-container, .MentionV2-container, .ChannelPill-container, .DefaultContentEmbedCard-container, .ChatMessageThread-container, .Editor-container, .ChatV2MessageEditHelper-container, .ChatV2MessageReplyHeader-container) {
+    pointer-events: auto;
+}
+.ChatV2Message-reply-headers {
+    position: relative;
+    z-index: 1;
+    pointer-events: none;
+}
+.ChatV2MessageReplyHeader-container {
+    max-width: max-content;
+}
+.ChatV2Message-container .ReactionsRowV2-badge {
+    z-index: 1;
+}
+.PortalTarget-container {
+    top: -100px;
+}
