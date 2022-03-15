@@ -6,21 +6,26 @@
     position: absolute;
     visibility: hidden;
     transform: translateY(calc(200vh + 18px));
+    /* Moves the original reply button offscreen. It's the cleanest way to remove the tooltip with just css. */
 }
 .ChatV2Message-container .QuickActionBar-action-wrapper:is([data-name="reply"],[data-name="reply-remove"])::after {
     content: '';
     visibility: visible;
     position: absolute;
     inset: -200vh -200px 0 -100vw;
+    /* This line above might cause performance issues. I'm not sure what's the best way to cover the entire message without making some elements static.
+    -200vh is 2 vertical screens worth of text, which also undoes the transformation. -100vw is 1 horizontal screen. */
     z-index: 0;
 }
 /* Messages */
 .ChatV2Message-content-wrapper {
     user-select: none;
+    /* Makes the text not selectible. It was only possible to select while holding shift anyways, and that interfered with the new thread popup. */
 }
 .ChatV2MessageContents-container {
     z-index: 1;
     pointer-events: none;
+    /* Makes the message container not interactive, which would normally open the new thread popup when clicked. */
 }
 /* Specific message elements */
 .ChatV2Message-container :is(.MediaRenderer-wrapper, .CodeContainerRenderer-language-indicator, .LinkRenderer, .EmbedCard-container, .MentionV2-container, .ChannelPill-container, .DefaultContentEmbedCard-container, .ChatMessageThread-container, .Editor-container, .ChatV2MessageEditHelper-container, .ChatV2MessageReplyHeader-container) {
@@ -37,6 +42,8 @@
 .ChatV2Message-container .ReactionsRowV2-badge {
     z-index: 1;
 }
+/* Misc */
 .PortalTarget-container {
     top: -100px;
+    /* Moves the reply button tooltip slightly higher, since there's a small chance that it would flicker in the top left corner while the inline style is still missing. */
 }
