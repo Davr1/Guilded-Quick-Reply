@@ -28,7 +28,7 @@
     /* Makes the message container not interactive, which would normally open the new thread popup when clicked. */
 }
 .ChatChannelMessagesList-message-status-bar-visible .ChatChannelMessagesList-messages {
-    transform:unset;
+    transform: unset;
 }
 .ChatChannelMessagesList-message-status-bar-visible .ChatChannelMessagesList-messages :is(
     .ChatV2Message-container-replying:last-child,

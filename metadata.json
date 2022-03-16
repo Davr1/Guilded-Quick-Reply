@@ -3,7 +3,8 @@
   "name": "Quick Reply",
   "description": "Allows you to quickly reply to a message by left clicking",
   "author": "VmMq9EQm",
-  "contributors": [],
+  "repoUrl": "https://github.com/Davr1/Guilded-Quick-Reply",
+  "images": ["https://user-images.githubusercontent.com/42148912/158409580-211a2239-bfbf-4f68-881d-f147108e7fe6.gif"],
   "version": "v0.0.2",
   "files": "theme.css"
 }
