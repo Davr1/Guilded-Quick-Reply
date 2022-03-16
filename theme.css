@@ -38,7 +38,23 @@
     margin-bottom: 29px; /* Only last three messages move the channel contents so it's less disorienting when replying to older messages */
 }
 /* Specific message elements */
-.ChatV2Message-container :is(.MediaRenderer-wrapper, .CodeContainerRenderer-language-indicator, .LinkRenderer, .EmbedCard-container, .MentionV2-container, .ChannelPill-container, .DefaultContentEmbedCard-container, .ChatMessageThread-container, .Editor-container, .ChatV2MessageEditHelper-container, .ChatV2MessageReplyHeader-container) {
+.ChatV2Message-container :is(
+    .MediaRenderer-wrapper,
+    .CodeContainerRenderer-language-indicator,
+    .LinkRenderer,
+    .EmbedCard-container,
+    .MentionV2-container,
+    .ChannelPill-container,
+    .DefaultContentEmbedCard-container,
+    .ChatMessageThread-container,
+    .Editor-container,
+    .ChatV2MessageEditHelper-container,
+    .ChatV2MessageReplyHeader-container,
+    .PrismTokenUrlRenderer-link,
+    .ChatEmbedAuthor-link,
+    .ChatEmbedContent-link,
+    .MaximizableImage-image
+) {
     pointer-events: auto;
 }
 .ChatV2Message-reply-headers {
