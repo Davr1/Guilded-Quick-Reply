@@ -53,7 +53,8 @@
     .PrismTokenUrlRenderer-link,
     .ChatEmbedAuthor-link,
     .ChatEmbedContent-link,
-    .MaximizableImage-image
+    .MaximizableImage-image,
+    .TeamEmbedCard-container
 ) {
     pointer-events: auto;
 }
