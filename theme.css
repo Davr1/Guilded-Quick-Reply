@@ -54,7 +54,8 @@
     .ChatEmbedAuthor-link,
     .ChatEmbedContent-link,
     .MaximizableImage-image,
-    .TeamEmbedCard-container
+    .TeamEmbedCard-container,
+    .CustomFormWrapper-container
 ) {
     pointer-events: auto;
 }
