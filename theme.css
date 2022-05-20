@@ -30,12 +30,8 @@
 .ChatChannelMessagesList-message-status-bar-visible .ChatChannelMessagesList-messages {
     transform: unset;
 }
-.ChatChannelMessagesList-message-status-bar-visible .ChatChannelMessagesList-messages :is(
-    .ChatV2Message-container-replying:last-child,
-    .ChatV2Message-container-replying:nth-last-child(2)~:last-child,
-    .ChatV2Message-container-replying:nth-last-child(3)~:last-child
-) {
-    margin-bottom: 29px; /* Only last three messages move the channel contents so it's less disorienting when replying to older messages */
+.ChatChannelMessagesList-message-status-bar-visible .ChatChannelMessagesList-messages :last-child>.ChatV2Message-container-replying:last-child {
+    margin-bottom: 29px; /* Only last message moves the channel contents so it's less disorienting when replying to older messages */
 }
 /* Specific message elements */
 .ChatV2Message-container :is(
