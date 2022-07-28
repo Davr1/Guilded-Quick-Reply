@@ -52,7 +52,8 @@
     .MaximizableImage-image,
     .TeamEmbedCard-container,
     .CustomFormWrapper-container,
-    .ReactionRenderer
+    .ReactionRenderer,
+    .FileUploadRenderer-container
 ) {
     pointer-events: auto;
 }
